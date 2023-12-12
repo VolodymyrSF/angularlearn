@@ -13,5 +13,8 @@ export class UserService {
   getAll():Observable<IUser[]>{
     return this.httpClient.get<IUser[]>(urls.users.base)
   }
+  getById(id:number):Observable<IUser>{
+    return this.httpClient.get<IUser>(urls.users.byId(id))
+  }
 
 }
